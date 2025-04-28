@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_call_history,access_crm_call_history,model_crm_call_history,,1,1,1,1
+access_crm_switch,access_crm_switch,model_crm_switch,,1,1,1,1

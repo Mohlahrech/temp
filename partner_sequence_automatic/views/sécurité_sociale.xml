@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="utm_source_view_tree_moh">
+        <field name="name">utm.source.view.moh.tree</field>
+        <field name="model">utm.source</field>
+        <field name="arch" type="xml">
+            <tree string="Sécurité sociale" multi_edit="1" sample="1">
+<!--                <field name="title" readonly="1"/>-->
+                <field name="name" string="Sécurité sociale"/>
+<!--                <field name="wilaya" string="Wilaya"/>-->
+
+<!--&lt;!&ndash;                <field name="user_id"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <field name="stage_id"/>&ndash;&gt;-->
+<!--                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>-->
+            </tree>
+        </field>
+    </record>
+
+<!--    search view-->
+    <record id="utm_source_search_view_hopital" model="ir.ui.view">
+        <field name="name">utm.source.search.securite</field>
+        <field name="model">utm.source</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Sécurité sociale"/>
+<!--                <field name="wilaya" string="Wilaya"/>-->
+<!--                <group expand="0" string="Group By">-->
+<!--                    <filter string="Wilaya" name="group_wilaya_id"-->
+<!--                        context="{'group_by': 'wilaya'}"/>-->
+<!--                </group>-->
+            </search>
+        </field>
+    </record>
+
+    <!-- Custom action for Patients -->
+
+    <record id="utm_source_action_hopital_action" model="ir.actions.act_window">
+        <field name="name">Sécurité Sociale</field>
+        <field name="res_model">utm.source</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('utm_source_view_tree_moh')})
+        ]"/>
+        <field name="search_view_id" ref="utm_source_search_view_hopital"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Créer Sécurité sociale</p>
+        </field>
+    </record>
+
+
+    <menuitem
+            id="crm_menu_patient_securite"
+            name="Sécurité sociale"
+            parent="crm.crm_menu_config"
+            action="utm_source_action_hopital_action"
+        />
+</odoo>

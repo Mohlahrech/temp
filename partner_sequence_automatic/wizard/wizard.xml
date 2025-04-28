@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_crm_stage_confirmation" model="ir.ui.view">
+        <field name="name">crm.stage.confirmation.form</field>
+        <field name="model">crm.stage.confirmation</field>
+        <field name="arch" type="xml">
+            <form string="Confirm Stage Change">
+                <group>
+                    <p>Are you sure you want to change the stage?</p>
+                </group>
+                <footer>
+                    <button string="Yes" type="object" name="action_confirm" class="btn-primary"/>
+                    <button string="No" type="object" name="action_cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_pharmacies" model="ir.actions.act_window">
+        <field name="name">Pharmacies (Pour créer une nouvelle pharmacie: Demander a Adel)</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="domain">[('is_pharmacie', '=', True)]</field>
+        <field name="context">{'default_is_pharmacie': True, 'create': False, 'edit': False}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Créer des Pharmacies dans ce menu
+          </p><p>
+            Menu des pharmacies
+          </p>
+        </field>
+    </record>
+
+            <menuitem id="crm_partner_menu_pharmacies"
+            name="Pharmacies"
+            action="action_pharmacies"
+            parent="crm.crm_menu_root"
+            sequence="15"/>
+
+
+<!--    <menuitem id="res_partner_menu_pharmacies"-->
+<!--        name="Pharmacies"-->
+<!--        action="action_pharmacies"-->
+<!--        parent="contacts.menu_contacts"-->
+<!--        sequence="5"/>-->
+
+
+</odoo>

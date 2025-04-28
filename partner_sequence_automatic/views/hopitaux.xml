@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <record model="ir.ui.view" id="utm_campaign_view_form_moh">
+        <field name="name">utm.campaign.view.moh.form</field>
+        <field name="model">utm.campaign</field>
+        <field name="arch" type="xml">
+            <form string="Hopitaux">
+                <sheet>
+                    <group id="top-group">
+                        <field class="text-break" name="title" string="Hopital" placeholder="Nom de l'hopital"/>
+                        <field name="name" invisible="1"/>
+                        <field name="wilaya2" string="Wilaya"/>
+                        <field name="user_id" domain="[('share', '=', False)]" invisible="1"/>
+			<field name="secteur" string="Secteur"/>
+                        <field name="tag_ids" string="Service" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                    </group>
+                    <notebook>
+                        <page string="Patients liés">
+                        <field name="partner_ids">
+                            <tree>
+                                <field name="name" />
+                                <field name="ref" />
+                                <field name="phone" />
+                            </tree>
+                        </field>
+                    </page>
+
+
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="utm_campaign_view_tree_moh">
+        <field name="name">utm.campaign.view.moh.tree</field>
+        <field name="model">utm.campaign</field>
+        <field name="arch" type="xml">
+            <tree string="Hopitaux" multi_edit="1" sample="1">
+                <field name="title"  string="Hopital" readonly="1"/>
+                <field name="name" invisible="1"/>
+                <field name="wilaya2" string="Wilaya"/>
+
+<!--                <field name="user_id"/>-->
+<!--                <field name="stage_id"/>-->
+                <field name="secteur"  string="Secteur"/>
+		<field name="tag_ids"  string="Service" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    search view-->
+    <record id="utm_campaign_search_view_hopital" model="ir.ui.view">
+        <field name="name">utm.campaign.search.hopital</field>
+        <field name="model">utm.campaign</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Hospital Name"/>
+                <field name="wilaya" string="Wilaya"/>
+                <group expand="0" string="Group By">
+                    <filter string="Wilaya" name="group_wilaya_id"
+                        context="{'group_by': 'wilaya2'}"/>
+		    <filter string="Secteur" name="group_secteur_id"
+                        context="{'group_by': 'secteur'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Custom action for Patients -->
+
+    <record id="utm_campaign_action_hopital_action" model="ir.actions.act_window">
+        <field name="name">Hopitaux</field>
+        <field name="res_model">utm.campaign</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('utm_campaign_view_tree_moh')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('utm_campaign_view_form_moh')})
+        ]"/>
+        <field name="search_view_id" ref="utm_campaign_search_view_hopital"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Créer Hopital</p>
+        </field>
+    </record>
+
+
+    <menuitem
+            id="crm_menu_patient_hopitaux"
+            name="Hopitaux"
+            parent="crm.crm_menu_config"
+            action="utm_campaign_action_hopital_action"
+        />
+</odoo>
