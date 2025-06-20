@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <!-- Vehicle Form View -->
+  <record id="agence_vehicule_view_form" model="ir.ui.view">
+  <field name="name">fleet.vehicle.form</field>
+  <field name="model">agence.vehicule</field>
+  <field name="arch" type="xml">
+    <form>
+      <header>
+        <button name="action_view_reservations"
+                type="object"
+                string="View Reservations"
+                class="oe_highlight"
+                icon="fa-calendar"/>
+
+         <button name="action_view_repairs"
+                type="object"
+                string="Repairs History"
+                class="oe_highlight"
+                icon="fa-wrench"/>
+      </header>
+
+      <sheet>
+        <!-- Message d'alerte conditionnel -->
+                    <div class="alert alert-warning" role="alert"
+                         invisible="not a_maintenir"
+                         style="margin-bottom: 10px;">
+                        <strong>Warning:</strong> <field name="maintenance_message" readonly="1"/>
+                    </div>
+        <div class="oe_title">
+          <h1>
+            <field name="marque" class="oe_inline" placeholder="e.g. Toyota"/>
+            <field name="modele" class="oe_inline" placeholder="e.g. Camry"/>
+          </h1>
+        </div>
+
+        <group col="2">
+          <group string="Vehicle Information">
+            <field name="immatriculation" string="License Plate" placeholder="e.g. ABC-1234"/>
+            <field name="annee" string="Year" placeholder="e.g. 2023"/>
+            <field name="cylindre" string="Engine Size" placeholder="e.g. 2000cc"/>
+            <field name="numerochassis" string="Chassis Number" placeholder="e.g. JTDKB20U677678906"/>
+            <field name="a_maintenir" invisible="1"/>
+          </group>
+
+          <group string="Status &amp; Requirements">
+              <field name="kilometrage_vehicule" string="Current Mileage"/>
+            <field name="permis_required" string="Special License Required" widget="boolean"/>
+            <field name="disponibilite" string="Availability" widget="statusbar" options="{'clickable': '1'}"/>
+          </group>
+        </group>
+
+        <notebook>
+          <page string="Additional Details">
+            <group>
+              <field name="notes" string="Internal Notes" placeholder="Enter any special vehicle requirements or notes..."/>
+            </group>
+          </page>
+
+
+
+            <page string="Workshop">
+                        <group>
+                            <group string="Perform Repair">
+                                <field name="type_maintenance_selection" string="Repair to Perform"/>
+                                <field name="maintenance_note" placeholder="Add a note about the performed repair..."/>
+                                <button name="action_faire_maintenance"
+                                        string="Apply Repair"
+                                        type="object"
+                                        class="oe_highlight"
+                                        icon="fa-wrench"/>
+                            </group>
+
+                        </group>
+                    </page>
+
+<!--                    <page string="Repair History">-->
+<!--                        <field name="historique_maintenance_ids">-->
+<!--                            <tree string="Historique">-->
+<!--                                <field name="date"/>-->
+<!--                                <field name="type_maintenance"/>-->
+<!--                                <field name="kilometrage"/>-->
+<!--                                <field name="note"/>-->
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                    </page>-->
+                </notebook>
+            </sheet>
+    </form>
+  </field>
+</record>
+
+
+    <!-- Vehicle List View -->
+    <record id="agence_vehicule_tree" model="ir.ui.view">
+      <field name="name">fleet.vehicle.tree</field>
+      <field name="model">agence.vehicule</field>
+      <field name="arch" type="xml">
+        <list decoration-success="disponibilite == 'disponible'" decoration-danger="disponibilite == 'en_location'" decoration-warning="a_maintenir == True">
+          <field name="marque" string="Brand" widget="handle"/>
+          <field name="modele" string="Model"/>
+          <field name="immatriculation" string="License Plate"/>
+          <field name="numerochassis" string="Chassis Number"/>
+          <field name="kilometrage_vehicule" string="Mileage"/>
+          <field name="annee" string="Year"/>
+          <field name="a_maintenir" string="Maintenance Required"/>
+          <field name="disponibilite" string="Availability"/>
+        </list>
+      </field>
+    </record>
+
+  </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="res_partner_form_view" model="ir.ui.view">
+        <field name="name">res.partner.form.rental.custom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="99"/> <!-- High priority to override -->
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="replace">
+                <form string="Driver Info">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Customer"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+
+                        <!-- Customer Image -->
+                        <field name="image_1920" widget="image" class="oe_avatar"/>
+
+                        <notebook>
+                            <page string="Rental Information">
+                                <group>
+                                    <group string="Personal Information">
+                                        <field name="nom" string="Last Name" required="1" placeholder="Doe"/>
+                                        <field name="prenom" string="First Name" required="1" placeholder="John"/>
+                                        <field name="date_naissance" string="Birth Date" widget="date" options="{'datepicker': {'maxDate': 'today'}}"/>
+                                    </group>
+
+                                    <group string="Contact Details">
+                                        <field name="adresse" string="Full Address" placeholder="123 Main St, City, Country"/>
+                                        <field name="phone" string="Phone Number"
+                                               widget="phone"
+                                               placeholder="+1 234 567 8900"
+                                               options="{'alwaysFormat': true}"/>
+                                    </group>
+
+                                    <group string="Driver's License">
+                                        <field name="permis_numero" string="License Number" placeholder="DL12345678"/>
+                                        <field name="permis_date" string="Issue Date" widget="date" options="{'datepicker': {'maxDate': 'today'}}"/>
+                                        <field name="permis_lieu" string="Issuing Authority" placeholder="State DMV"/>
+                                        <field name="jeune_conducteur" string="New Driver"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </xpath>
+        </field>
+    </record>
+</odoo>

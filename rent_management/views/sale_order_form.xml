@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Enhanced Sale Order Form View -->
+        <record id="discount_sale_view_form" model="ir.ui.view">
+            <field name="name">sale.order.form.enhanced</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <!-- Header Buttons -->
+                <xpath expr="//header" position="inside">
+                    <field name="state_location" invisible="1"/>
+                    <field name="rental_done" invisible="1"/>
+                    <button name="action_set_done" type="object" string="Complete Rental" class="btn-primary"
+                        invisible="state == 'draft' or rental_done == True"
+                        help="Mark this rental as completed"/>
+
+                    <field name="is_prolongation" invisible="1"/>
+                    <button name="action_set_prolongation" type="object" string="Extend Rental" class="btn-primary"
+                        invisible="state == 'draft' or is_prolongation == True"
+                        help="Create an extension for this rental"/>
+                </xpath>
+
+                <!-- Extensions Page -->
+                <xpath expr="//page[@name='customer_signature']" position="replace">
+                    <page name="signature_page" string="Signature">
+                        <group>
+                            <field name="customer_signature_img" widget="signature" nolabel="1"/>
+                        </group>
+                    </page>
+                    <page name="prolongation_page" string="Extensions" invisible="not is_prolongation">
+                          <div class="oe_title">
+                              <field name="prolongation_id" nolabel="1">
+                                <list editable="bottom" delete="false" string="Extension Periods">
+                                  <field name="depart_prolongation" string="Start Date" widget="date"/>
+                                  <field name="retour_prolongation" string="End Date" widget="date"/>
+                                  <field name="nombre_jour_prolongation" string="Days" readonly="1"/>
+                                  <button name="unlink_line"
+                                          string="Remove"
+                                          type="object"
+                                          class="btn-danger"
+                                          icon="fa-trash"
+                                          help="Delete this extension"
+                                          groups="rent_management.group_access_sav"/>
+                                </list>
+                              </field>
+                            </div>
+
+                        </page>
+
+                </xpath>
+
+                <!-- Drivers and Rental Information -->
+                <xpath expr="//group[@name='order_details']" position="after">
+                    <!-- Driver 1 Information -->
+                    <group string="Primary Driver">
+                        <field name="conducteur1"/>
+                        <field name="nom" string="Last Name"/>
+                        <field name="prenom" string="First Name"/>
+                        <field name="date_naissance" string="Birth Date" widget="date"/>
+                        <field name="adresse" string="Address"/>
+                        <field name="email" string="Email" widget="email"/>
+                        <field name="telephone" string="Phone" widget="phone"/>
+                        <field name="permis_numero" string="License Number"/>
+                        <field name="permis_date" string="Issue Date" widget="date"/>
+                        <field name="permis_lieu" string="Issuing Authority"/>
+                        <field name="jeune_conducteur" string="New Driver"/>
+                    </group>
+
+                    <!-- Driver 2 Information -->
+                    <group string="Secondary Driver">
+                        <field name="conducteur2"/>
+                        <field name="nom2" string="Last Name"/>
+                        <field name="prenom2" string="First Name"/>
+                        <field name="date_naissance2" string="Birth Date" widget="date"/>
+                        <field name="adresse2" string="Address"/>
+                        <field name="email2" string="Email" widget="email"/>
+                        <field name="telephone2" string="Phone" widget="phone"/>
+                        <field name="permis_numero2" string="License Number"/>
+                        <field name="permis_date2" string="Issue Date" widget="date"/>
+                        <field name="permis_lieu2" string="Issuing Authority"/>
+                        <field name="jeune_conducteur2" string="New Driver"/>
+                    </group>
+
+                    <!-- Rental Details -->
+                    <group string="Rental Information">
+                        <field name="vehicule_marque" string="Vehicle" required="1"/>
+                        <field name="vehicule_immatriculation" string="License Plate"/>
+                        <field name="date_depart" string="Start Date" required="1" widget="date"/>
+                        <field name="start_time" string="Start Time" widget="float_time" required="1"/>
+                        <field name="date_retour" string="End Date" widget="date"/>
+                        <field name="return_time" string="End Time" widget="float_time"/>
+                        <field name="nombre_jour" string="Number of Days" required="1"/>
+                    </group>
+
+                    <!-- Vehicle Check -->
+                    <group string="Vehicle Condition">
+                        <field name="kilometrage_depart" string="Start Mileage (km)" required="1"/>
+                        <field name="niveau_fuel_depart" string="Start Fuel Level" widget="priority" required="1"/>
+                        <field name="kilometrage_retour" string="End Mileage (km)"/>
+                        <field name="niveau_fuel_retour" string="End Fuel Level" widget="priority"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Enhanced Sale Order Tree View -->
+        <record id="discount_sale_view_tree" model="ir.ui.view">
+            <field name="name">sale.order.tree.enhanced</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="date_depart" string="Start Date"/>
+                    <field name="date_retour" string="End Date"/>
+                    <field name="latest_retour_prolongation" string="Latest Extension Return"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_rent_management_team">
+     <t t-call="web.external_layout">
+
+        <div class="page" style="font-family: Arial, sans-serif; line-height: 1.5;padding-top:0;">
+            <br/><br/><br/><br/>
+            <h1 style="text-align: center;">Rental Contract: <t t-esc="doc.name"/></h1>
+
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 5px;" border="1">
+    <thead>
+        <tr>
+            <th colspan="4" style="text-align: left; padding:2px;">Driver Information</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Last Name:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.nom"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Last Name (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.nom2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>First Name:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.prenom"/></td>
+            <td style="padding:2px; width: 25%;"><strong>First Name (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.prenom2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Date of Birth:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.date_naissance"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Date of Birth (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.date_naissance2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Address:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.adresse"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Address (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.adresse2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Phone:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.telephone"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Phone (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.telephone2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Email:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.email"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Email (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.email2"/></td>
+        </tr>
+        <tr>
+            <th colspan="4" style="padding:2px;">Driver's License</th>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>License Number:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.permis_numero"/></td>
+            <td style="padding:2px; width: 25%;"><strong>License Number (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.permis_numero2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Issue Date:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.permis_date"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Issue Date (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.permis_date2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>Place of Issue:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.permis_lieu"/></td>
+            <td style="padding:2px; width: 25%;"><strong>Place of Issue (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="doc.permis_lieu2"/></td>
+        </tr>
+        <tr>
+            <td style="padding:2px; width: 25%;"><strong>New Driver:</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="'Yes' if doc.jeune_conducteur else 'No'"/></td>
+            <td style="padding:2px; width: 25%;"><strong>New Driver (2):</strong></td>
+            <td style="padding:2px; width: 25%;"><t t-esc="'Yes' if doc.jeune_conducteur2 else 'No'"/></td>
+        </tr>
+    </tbody>
+</table>
+
+            <table style="width: 100%; border-collapse: collapse;margin-bottom: 5px;" border="1">
+                <thead>
+                    <tr>
+                        <th colspan="2" style="text-align: left; padding:2px;">Rental Details / Departure  ☐    / Reservation  ☐</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>Departure Date:</strong></td>
+                        <td style="padding:2px;"><t t-esc="doc.date_depart"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>Departure Time:</strong></td>
+                        <td style="padding:2px;"><t t-esc="doc.start_time"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>Return Date:</strong></td>
+                        <td style="padding:2px;width: 50%;"><t t-esc="doc.date_retour"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>Return Time:</strong></td>
+                        <td style="padding:2px;width: 50%;"><t t-esc="doc.return_time"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>Number of Days:</strong></td>
+                        <td style="padding:2px;width: 50%;"><t t-esc="doc.nombre_jour"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>Vehicle Brand:</strong></td>
+                        <td style="padding:2px;width: 50%;"><t t-esc="doc.nom_marque"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 50%;"><strong>License Plate:</strong></td>
+                        <td style="padding:2px;width: 50%;"><t t-esc="doc.vehicule_immatriculation"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 100%; border-collapse: collapse;" border="1">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:2px;width: 25%;"><strong>Starting Mileage:</strong></td>
+                        <td style="padding:2px;width: 25%;"><t t-esc="doc.kilometrage_depart"/></td>
+                        <td style="padding:2px;width: 25%;"><strong>Return Mileage:</strong></td>
+                        <td style="padding:2px;width: 50%;"><t t-esc="doc.kilometrage_retour"/></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:2px;width: 25%;"><strong>Starting Fuel Level:</strong></td>
+                        <td style="padding:2px;width: 25%;"><t t-esc="doc.niveau_fuel_depart"/></td>
+                        <td style="padding:2px;width: 25%;"><strong>Return Fuel Level:</strong></td>
+                        <td style="padding:2px;width: 25%;"><t t-esc="doc.niveau_fuel_retour"/></td>
+                    </tr>
+
+                    <!-- Extension Section -->
+                    <t t-if="doc.prolongation_id">
+                        <tr>
+                            <td colspan="3" style="padding:2px; text-align: center; font-weight: bold; background-color: #f2f2f2;">Extensions</td>
+                        </tr>
+                        <tr>
+                            <th style="padding:2px; text-align: center; width: 33%;">Extension Start Date</th>
+                            <th style="padding:2px; text-align: center; width: 33%;">Extension End Date</th>
+                            <th style="padding:2px; text-align: center; width: 33%;">Number of Days</th>
+                        </tr>
+                        <t t-foreach="doc.prolongation_id" t-as="prolongation">
+                            <tr>
+                                <td style="padding:2px; text-align: center;"><t t-esc="prolongation.depart_prolongation or ''"/></td>
+                                <td style="padding:2px; text-align: center;"><t t-esc="prolongation.retour_prolongation or ''"/></td>
+                                <td style="padding:2px; text-align: center;"><t t-esc="prolongation.nombre_jour_prolongation or ''"/></td>
+                            </tr>
+                        </t>
+                    </t>
+
+
+                </tbody>
+            </table>
+
+            <br/><br/>
+
+
+            <div style="font-size:14px;">
+            <div>Warning: By accepting to rent the vehicle, you agree to be responsible for all repair costs that may occur. Penalties will apply in the following cases for the Renter: </div>
+            <div>Penalties:</div>
+            <ul style="margin-bottom:0rem;">
+                <li>Cancellation less than 48 hours before the rental date: 3000 F</li>
+                <li>Failure to return the vehicle on the agreed date: 3000 F</li>
+                <li>Use of the vehicle by an unauthorized driver: 10,000 F</li>
+                <li>Non-payment of rental extension: 3000 F</li>
+                <li>Failure to comply with cleanliness standards: 2000 F</li>
+            </ul>
+            <div>The security deposit will be retained to cover any damage caused by the renter, and this amount will not be deducted from the repair costs.
+                *varies depending on the case. </div>
+
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+            <div>General Conditions</div>
+                <br/>
+            <div>
+                ☐ I certify that I have read and accepted the terms of the rental contract in question (front/back) without any
+                exception or reservation. I authorize FG RENT to charge and debit my security deposit for any additional
+                services not initially included in my rental contract, in accordance with the terms stated on the back.
+            </div>
+
+            <t t-if="doc.customer_signature_img">
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <strong>Client Signature:</strong>
+                        <div class="mt-2">
+                            <img t-attf-src="data:image/png;base64,{{ doc.customer_signature_img }}" style="max-height: 150px; max-width: 300px;"/>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <t t-else="">
+                <p><strong>Date:</strong> <t t-esc="doc.date_signature"/></p>
+                <p><strong>Signature:</strong> _________________________</p>
+            </t>
+            </div>
+
+            <div class="oe_structure"/>
+        </div>
+    </t>
+</template>
+
+<template id="conditions">
+    <t t-call="rent_management.maeva_internal_layout">
+        <div class="page" style="width: 98%; height: 98vh; margin: auto; padding: 5px; text-align: center;">
+            <img t-att-src="'/rent_management/static/src/img/conditions.png'"
+                 style="width: 99%; height: 98vh; object-fit: contain;"/>
+        </div>
+    </t>
+</template>
+
+<template id="etat">
+    <t t-call="rent_management.maeva_internal_layout">
+        <div class="page" style="width: 98%; height: 98vh; margin: auto; padding: 5px; text-align: center;">
+            <img t-att-src="'/rent_management/static/src/img/etat.png'"
+                 style="width: 99%; height: 98vh; object-fit: contain;"/>
+        </div>
+    </t>
+</template>
+
+<template id="report_rent_management">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-if="doc.has_paid_invoice">
+                <t t-call="rent_management.report_rent_management_team"/>
+                <t t-call="rent_management.conditions"/>
+                <t t-call="rent_management.etat"/>
+            </t>
+            <t t-else="">
+                <div style="text-align: center; font-size: 20px; font-weight: bold; margin-top: 50px;">
+                    The invoice must be created, confirmed, and paid to print the contract.
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+
+<record id="rent_management.action_report_crm" model="ir.actions.report">
+    <field name="name">Rental Contract</field>
+    <field name="model">sale.order</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">rent_management.report_rent_management</field>
+    <field name="report_file">rent_management.report_rent_management</field>
+    <field name="paperformat_id" ref="rent_management.commercial_offer_report_format"/>
+    <field name="binding_model_id" ref="model_sale_order"/>
+    <field name="binding_type">report</field>
+    <field name="print_report_name">'Rental Contract - %s' % (object.name)</field>
+</record>
+</odoo>

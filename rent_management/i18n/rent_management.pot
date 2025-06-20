@@ -1,0 +1,1577 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rent_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-10 10:07+0000\n"
+"PO-Revision-Date: 2025-06-10 10:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rent_management
+#: model:ir.actions.report,print_report_name:rent_management.action_report_crm
+msgid "'Rental Contract - %s' % (object.name)"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "+1 234 567 8900"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_depart__1
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_retour__1
+msgid "1/4"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "123 Main St, City, Country"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_depart__3
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_retour__3
+msgid "3/4"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Address (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Address:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Date of Birth (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Date of Birth:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Departure Date:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Departure Time:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Email (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Email:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>First Name (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>First Name:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Issue Date (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Issue Date:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Last Name (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Last Name:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>License Number (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>License Number:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>License Plate:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>New Driver (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>New Driver:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Number of Days:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Phone (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Phone:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Place of Issue (2):</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Place of Issue:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Return Date:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Return Fuel Level:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Return Mileage:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Return Time:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Signature:</strong> _________________________"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Starting Fuel Level:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Starting Mileage:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "<strong>Vehicle Brand:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "<strong>Warning:</strong>"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__kilometrage_vehicule
+msgid "Actual Mileage"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Add a note about the performed repair..."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Additional Details"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__notes
+msgid "Additional Notes"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__adresse
+#: model:ir.model.fields,field_description:rent_management.field_res_users__adresse
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__adresse
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__adresse2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Address"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_all
+msgid "All Rentals"
+msgstr "Tous les Contrats"
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__maintenance_ids
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Applicable Repairs"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Apply Repair"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__disponibilite
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_tree
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Availability"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__agence_vehicule__disponibilite__disponible
+msgid "Available"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Basic Information"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__date_naissance
+#: model:ir.model.fields,field_description:rent_management.field_res_users__date_naissance
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__date_naissance
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__date_naissance2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Birth Date"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__marque
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_tree
+msgid "Brand"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__nom_marque
+msgid "Brand Name"
+msgstr ""
+
+#. module: rent_management
+#: model:res.groups,name:rent_management.group_access_sav
+msgid "Can Delete Extensions"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Cancellation less than 48 hours before the rental date: 3000 F"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state__cancel
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__numerochassis
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Chassis Number"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Check if the driver has less than 3 years of experience"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Complete Rental"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_done
+msgid "Completed"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.rent_management_action_done
+msgid "Completed Rentals"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model,name:rent_management.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Contact Details"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Contact Number"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Create Customer & Start Rental"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Create Rental Customer"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.action_quotations_with_onboarding2
+msgid "Create a new rental contract."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.maeva_vehicule
+msgid "Create a new vehicle to add to your fleet."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Create an extension for this rental"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.action_maintenance_products
+msgid ""
+"Create maintenance products to track vehicle services like oil changes, belt"
+" replacements, etc."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.action_maintenance_products
+msgid "Create your first maintenance product!"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.action_rental_customers
+msgid "Create your first rental customer!"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__create_uid
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__create_uid
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__create_date
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__create_date
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Current Mileage"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Customer created, but failed to get valid ID. Cannot open rental form."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "DL12345678"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__date
+msgid "Date"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__depart_prolongation
+msgid "Date de départ (Prolongation)"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__retour_prolongation
+msgid "Date de retour (Prolongation)"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Date of Last Other"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Date of Last Periodic"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Date when the license was issued"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Days"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Delete this extension"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__display_name
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__display_name
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Doe"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__done
+msgid "Done"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__draft
+msgid "Draft"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Driver Information"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Driver's License"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Driver's License Information"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__email
+#: model:ir.model.fields,field_description:rent_management.field_res_users__email
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__email
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__email2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Email"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Email Address"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_depart__0
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_retour__0
+msgid "Empty"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__date_retour
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_tree
+msgid "End Date"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__niveau_fuel_retour
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "End Fuel Level"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__kilometrage_retour
+msgid "End Mileage"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "End Mileage (km)"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__return_time
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "End Time"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__cylindre
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Engine Size"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Enter any special vehicle requirements or notes..."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Enter the driver's license number exactly as it appears"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Error: ${error.data.message}"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Extend Rental"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__prolongation
+msgid "Extension"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Extension End Date"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Extension Periods"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Extension Start Date"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__prolongation_id
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Extensions"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid ""
+"Failed to create customer record. Please check all required fields and try "
+"again."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Failure to comply with cleanliness standards: 2000 F"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Failure to return the vehicle on the agreed date: 3000 F"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__prenom
+#: model:ir.model.fields,field_description:rent_management.field_res_users__prenom
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__prenom
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__prenom2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "First Name"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__retour
+msgid "For Today"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__force_done
+msgid "Force Done"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_depart__4
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_retour__4
+msgid "Full"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Full Address"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Full Name"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "General Conditions"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.view_move_form_inherit
+msgid ""
+"Generate and print the customer rental contract (available only for paid "
+"invoices)"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Government agency that issued the license"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_depart__2
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__niveau_fuel_retour__2
+msgid "Half"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__has_paid_invoice
+msgid "Has Paid Invoice"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__has_uninvoiced_lines
+msgid "Has Uninvoiced Lines"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__id
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__id
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__id
+msgid "ID"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__encours
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_encours
+msgid "In Progress"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Internal Notes"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__is_prolongation
+msgid "Is Extension"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__is_customer
+#: model:ir.model.fields,field_description:rent_management.field_res_users__is_customer
+msgid "Is a Rental Customer"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_product_product__est_maintenance
+#: model:ir.model.fields,field_description:rent_management.field_product_template__est_maintenance
+msgid "Is a Repair Service"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Issue Date"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__permis_lieu
+#: model:ir.model.fields,field_description:rent_management.field_res_users__permis_lieu
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__permis_lieu
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__permis_lieu2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Issuing Authority"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "John"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model,name:rent_management.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__nom
+#: model:ir.model.fields,field_description:rent_management.field_res_users__nom
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__nom
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__nom2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Last Name"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Last Other Repair"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Last Periodic Maintenance"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__write_uid
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__write_uid
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__write_date
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__write_date
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__retard
+msgid "Late"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.rent_management_action_retard
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_retard
+msgid "Late Rentals"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__latest_retour_prolongation
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_tree
+msgid "Latest Extension Return"
+msgstr ""
+
+
+
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__permis_date
+#: model:ir.model.fields,field_description:rent_management.field_res_users__permis_date
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__permis_date
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__permis_date2
+msgid "License Issue Date"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__permis_numero
+#: model:ir.model.fields,field_description:rent_management.field_res_users__permis_numero
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__permis_numero
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__permis_numero2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "License Number"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__immatriculation
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__vehicule_immatriculation
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_tree
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.view_quotation_tree_inherit
+msgid "License Plate"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.gestion_des_contrats_menu_vehicules
+msgid "List of Vehicles"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state__done
+msgid "Locked"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__maintenance_message
+msgid "Maintenance Message"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.action_maintenance_products
+#: model:ir.ui.menu,name:rent_management.menu_maintenance_products
+msgid "Maintenance Products"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__a_maintenir
+msgid "Maintenance Required"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.maeva_vehicule
+msgid "Manage all vehicle information and specifications here."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.action_rental_customers
+msgid ""
+"Manage your rental customers: track their rentals, contact information, and "
+"rental history."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Mark this rental as completed"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Mileage at Last Other"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Mileage at Last Periodic"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__kilometrage
+msgid "Mileage at Maintenance"
+msgstr ""
+
+
+
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__modele
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_tree
+msgid "Model"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "N/A"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__jeune_conducteur
+#: model:ir.model.fields,field_description:rent_management.field_res_users__jeune_conducteur
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__jeune_conducteur
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__jeune_conducteur2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "New Driver"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__nombre_jour_prolongation
+msgid "Nombre de jours (Prolongation)"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Non-payment of rental extension: 3000 F"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__product_template__maintenance_type__none
+msgid "Not Applicable"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__note
+msgid "Notes"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__nombre_jour
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Number of Days"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.action_quotations_with_onboarding2
+msgid ""
+"Once the contract has been confirmed, you will be able to create an invoice "
+"and collect the payment."
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__historique_maintenance__type_maintenance__autre
+#: model:ir.model.fields.selection,name:rent_management.selection__product_template__maintenance_type__changement_courroie
+msgid "Other"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__historique_maintenance__type_maintenance__changement_courroie
+msgid "Other Repair"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__agence_vehicule__type_maintenance_selection__changement_courroie
+msgid "Other repair"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Penalties:"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Perform Repair"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__agence_vehicule__type_maintenance_selection__vidange
+#: model:ir.model.fields.selection,name:rent_management.selection__product_template__maintenance_type__vidange
+msgid "Periodic"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__historique_maintenance__type_maintenance__vidange
+msgid "Periodic Repair"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Personal Information"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_res_partner__telephone
+#: model:ir.model.fields,field_description:rent_management.field_res_users__telephone
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__telephone
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__telephone2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Phone"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Phone Number"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid ""
+"Phone number : %s\n"
+"Vehicle : %s\n"
+"Licence Plate : %s"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid ""
+"Please add an additional order line related to the extension that has been "
+"added."
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "Please add an extension for the late days."
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Please fill in all required fields:\n"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "Please insert the End Mileage."
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/config.py:0
+msgid "Please select a maintenance to perform."
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__conducteur1
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Primary Driver"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.view_move_form_inherit
+msgid "Print Rental Contract"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model,name:rent_management.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.menu_action_rental_dashboard
+msgid "Quick Rental Creation"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "Quickly add a new customer and create a rental contract."
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state__draft
+msgid "Quotation"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state__sent
+msgid "Quotation Sent"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Remove"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.module.category,name:rent_management.module_category_car_rental
+msgid "Rental"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.rent_contract_calendar_root
+msgid "Rental Calendar"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.report,name:rent_management.action_report_crm
+msgid "Rental Contract"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Rental Contract:"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.action_quotations_with_onboarding2
+msgid "Rental Contracts"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.action_rental_customers
+#: model:ir.ui.menu,name:rent_management.rent_management_customers_root
+msgid "Rental Customers"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.client,name:rent_management.action_rental_dashboard
+msgid "Rental Dashboard"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Rental Details / Departure  ☐    / Reservation  ☐"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "Rental Information"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.rent_contract_invoice_root
+msgid "Rental Invoicing"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__sale_order_ids
+msgid "Rental Orders"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__state_location_stored
+msgid "Rental State"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__state_location
+#: model_terms:ir.ui.view,arch_db:rent_management.view_quotation_tree_inherit
+msgid "Rental Status"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_root
+msgid "Rental Contracts"
+msgstr "Contrats"
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.rent_management_action_encours
+msgid "Rentals In Progress"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__agence_vehicule__disponibilite__en_location
+msgid "Rented"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__maintenance_note
+msgid "Repair Description"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.view_historique_maintenance_form
+msgid "Repair Details"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.view_historique_maintenance_tree
+msgid "Repair History"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_product_product__kilometrage_produit
+#: model:ir.model.fields,field_description:rent_management.field_product_template__kilometrage_produit
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.product_template_form_view_maeva_inherit
+msgid "Repair Interval (km)"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__type_maintenance
+#: model:ir.model.fields,field_description:rent_management.field_product_product__maintenance_type
+#: model:ir.model.fields,field_description:rent_management.field_product_template__maintenance_type
+#: model_terms:ir.ui.view,arch_db:rent_management.product_template_form_view_maeva_inherit
+msgid "Repair Type"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Repair to Perform"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Repairs History"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/config.py:0
+msgid "Repairs for %s"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__historique_maintenance_ids
+msgid "Repairs history"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__type_maintenance_selection
+msgid "Repairs to perform"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/config.py:0
+msgid "Reservations for %s"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state_location__reserve
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_reserve
+msgid "Reserved"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.rent_management_action_reserve
+msgid "Reserved Rentals"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.rent_management_action_retour
+msgid "Returns of the Day"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order_prolongation__sale_order_id
+msgid "Sale Order"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model,name:rent_management.model_sale_order_prolongation
+msgid "Sale Order Prolongation"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model,name:rent_management.model_sale_order
+#: model:ir.model.fields.selection,name:rent_management.selection__sale_order__state__sale
+msgid "Sales Order"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__conducteur2
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Secondary Driver"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Service Name"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__date_signature
+msgid "Signature Date"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__permis_required
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Special License Required"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__date_depart
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_tree
+msgid "Start Date"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__niveau_fuel_depart
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Start Fuel Level"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__kilometrage_depart
+msgid "Start Mileage"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Start Mileage (km)"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__start_time
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Start Time"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.res_partner_form_view
+msgid "State DMV"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__state
+msgid "Status"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Status & Requirements"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "Success!"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management
+msgid ""
+"The invoice must be created, confirmed, and paid to print the contract."
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "The rent contract has been closed successfully ✅"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid ""
+"The security deposit will be retained to cover any damage caused by the renter, and this amount will not be deducted from the repair costs.\n"
+"                *varies depending on the case."
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "This contract is late!"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/config.py:0
+msgid "This vehicle needs a periodic maintenance and another maintenance."
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/config.py:0
+msgid "This vehicle needs a periodic maintenance."
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/config.py:0
+msgid "This vehicle needs another maintenance."
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.rent_management_menu_retour
+msgid "Today's Returns"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "Unable to close the contract: some order lines are not invoiced."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid "Use of the vehicle by an unauthorized driver: 10,000 F"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.module.category,description:rent_management.module_category_car_rental
+msgid "User access levels for the Rental module."
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_historique_maintenance__vehicule_id
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Vehicle"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_sale_order__vehicule_marque
+msgid "Vehicle Brand"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.discount_sale_view_form
+msgid "Vehicle Condition"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.actions.act_window,name:rent_management.maeva_vehicule
+#: model:ir.model,name:rent_management.model_agence_vehicule
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Vehicle Information"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model,name:rent_management.model_historique_maintenance
+msgid "Vehicle Maintenance History"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.ui.menu,name:rent_management.gestion_des_vehicules_root
+msgid "Vehicles"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "View Reservations"
+msgstr ""
+
+#. module: rent_management
+#. odoo-python
+#: code:addons/rent_management/models/sale_order.py:0
+msgid "Warning!"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid ""
+"Warning: By accepting to rent the vehicle, you agree to be responsible for "
+"all repair costs that may occur. Penalties will apply in the following cases"
+" for the Renter:"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Workshop"
+msgstr ""
+
+#. module: rent_management
+#: model:ir.model.fields,field_description:rent_management.field_agence_vehicule__annee
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_tree
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "Year"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "e.g. 2000cc"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "e.g. 2023"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "e.g. ABC-1234"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "e.g. Camry"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "e.g. JTDKB20U677678906"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.agence_vehicule_view_form
+msgid "e.g. Toyota"
+msgstr ""
+
+#. module: rent_management
+#. odoo-javascript
+#: code:addons/rent_management/static/src/js/rental_dashboard.js:0
+msgid "name@example.com"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.ui.view,arch_db:rent_management.report_rent_management_team
+msgid ""
+"☐ I certify that I have read and accepted the terms of the rental contract in question (front/back) without any\n"
+"                exception or reservation. I authorize FG RENT to charge and debit my security deposit for any additional\n"
+"                services not initially included in my rental contract, in accordance with the terms stated on the back."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.rent_management_action_encours
+msgid "Active Rentals"
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.rent_management_action_encours
+msgid ""
+"This menu displays currently ongoing rentals. The vehicles are out with "
+"customers and due for return on their scheduled date."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.rent_management_action_retour
+msgid ""
+"This menu displays today's returns (you can extend them by clicking on "
+"Extend)."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.rent_management_action_retard
+msgid ""
+"This menu displays rentals that are past their due date. You can take action"
+" by contacting customers or updating return statuses."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.rent_management_action_done
+msgid ""
+"This menu displays successfully completed rentals. All vehicles have been "
+"returned and transactions are finalized."
+msgstr ""
+
+#. module: rent_management
+#: model_terms:ir.actions.act_window,help:rent_management.rent_management_action_reserve
+msgid ""
+"This menu displays upcoming reservations. Vehicles are not yet rented but "
+"are scheduled for future rentals."
+msgstr ""

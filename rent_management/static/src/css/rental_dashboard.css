@@ -1,0 +1,72 @@
+.rental_dashboard {
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+
+.rental_dashboard .text-primary {
+    color: #714B67 !important;
+}
+
+.rental_dashboard .btn-primary {
+    background-color: #714B67;
+    border-color: #714B67;
+}
+
+.rental_dashboard .btn-primary:hover {
+    background-color: #563651;
+    border-color: #563651;
+}
+
+.rental_dashboard .card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.rental_dashboard .card-body {
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.rental_dashboard .card-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.rental_dashboard .card-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.rental_dashboard .card-body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.rental_dashboard .card-body::-webkit-scrollbar-thumb:hover {
+    background: #714B67;
+}
+
+.rental_dashboard .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+.rental_dashboard .form-control:focus {
+    border-color: #714B67;
+    box-shadow: 0 0 0 0.2rem rgba(113, 75, 103, 0.25);
+}
+
+.rental_dashboard h5.text-primary {
+    margin-top: 1rem;
+    border-bottom: 2px solid #714B67;
+    padding-bottom: 0.5rem;
+}
+
+.rental_dashboard .save_customer:disabled {
+    background-color: #cccccc;
+    border-color: #cccccc;
+}

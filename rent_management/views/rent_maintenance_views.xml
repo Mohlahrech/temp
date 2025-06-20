@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- rent.maintenance tree view -->
+        <record id="rent_maintenance_view_tree" model="ir.ui.view">
+            <field name="name">rent.maintenance.view.tree</field>
+            <field name="model">rent.maintenance</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="mileage_to_notify"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- rent.maintenance form view -->
+        <record id="rent_maintenance_view_form" model="ir.ui.view">
+            <field name="name">rent.maintenance.view.form</field>
+            <field name="model">rent.maintenance</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="mileage_to_notify"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo> 

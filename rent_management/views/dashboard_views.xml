@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Dashboard Client Action -->
+    <record id="action_rental_dashboard" model="ir.actions.client">
+        <field name="name">Rental Dashboard</field>
+        <field name="tag">rent_management.rental_dashboard</field>
+    </record>
+
+    <!-- Dashboard Menu Item -->
+    <menuitem id="menu_action_rental_dashboard"
+              name="Quick Rental"
+              action="action_rental_dashboard"
+              web_icon="rent_management,static\description\assets\icons\quick_icon.png"
+              sequence="5"/>
+</odoo>

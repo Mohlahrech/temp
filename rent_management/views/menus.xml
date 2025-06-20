@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <!-- Actions for each state -->
+
+
+        <record id="rent_management_action_encours" model="ir.actions.act_window">
+            <field name="name">Rentals In Progress</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="view_id" ref="view_quotation_tree_inherit"/>
+            <field name="domain">[('state_location_stored', '=', 'encours')]</field>
+            <field name="context">{'search_default_encours':1, 'create': False}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Active Rentals
+                </p>
+                <p>
+                    This menu displays currently ongoing rentals. The vehicles are out with customers and due for return on their scheduled date.
+                </p>
+            </field>
+        </record>
+
+        <record id="rent_management_action_retour" model="ir.actions.act_window">
+            <field name="name">Returns of the Day</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="view_id" ref="view_quotation_tree_inherit"/>
+            <field name="domain">[('state_location_stored', '=', 'retour')]</field>
+            <field name="context">{'search_default_retour':1, 'create': False}</field>
+             <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Today's Returns
+                </p><p>
+                    This menu displays today's returns (you can extend them by clicking on Extend).
+                </p>
+            </field>
+        </record>
+
+        <record id="rent_management_action_retard" model="ir.actions.act_window">
+            <field name="name">Late Rentals</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="view_id" ref="view_quotation_tree_inherit"/>
+            <field name="domain">[('state_location_stored', '=', 'retard')]</field>
+            <field name="context">{'search_default_retard':1, 'default_state_location_stored':'retard', 'create': False}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Late Rentals
+                </p>
+                <p>
+                    This menu displays rentals that are past their due date. You can take action by contacting customers or updating return statuses.
+                </p>
+            </field>
+        </record>
+
+        <record id="rent_management_action_done" model="ir.actions.act_window">
+            <field name="name">Completed Rentals</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="view_id" ref="view_quotation_tree_inherit"/>
+            <field name="domain">[('state_location_stored', '=', 'done')]</field>
+            <field name="context">{'search_default_done':1, 'create': False}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Completed Rentals
+                </p>
+                <p>
+                    This menu displays successfully completed rentals. All vehicles have been returned and transactions are finalized.
+                </p>
+            </field>
+        </record>
+
+        <record id="rent_management_action_reserve" model="ir.actions.act_window">
+            <field name="name">Reserved Rentals</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="view_id" ref="view_quotation_tree_inherit"/>
+            <field name="domain">[('state_location_stored', '=', 'reserve')]</field>
+            <field name="context">{'search_default_reserve':1, 'default_state_location_stored':'reserve', 'create': False}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Reserved Rentals
+                </p>
+                <p>
+                    This menu displays upcoming reservations. Vehicles are not yet rented but are scheduled for future rentals.
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_quotations_with_onboarding2" model="ir.actions.act_window">
+            <field name="name">Rental Contracts</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">list,kanban,form,calendar,pivot,graph,activity</field>
+            <field name="view_id" ref="view_quotation_tree_inherit"/>
+            <field name="search_view_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+            <field name="context">{'search_default_my_quotation': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new rental contract.
+                </p>
+                <p>
+                    Once the contract has been confirmed, you will be able to create an invoice and collect the payment.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Main Menu: Rentals -->
+        <menuitem id="rent_management_menu_root"
+                  name="Rental Contracts"
+                  sequence="10"
+                  web_icon="rent_management,static\description\assets\icons\contract_icon.png"/>
+
+        <!-- Rentals Sub-Menus -->
+        <menuitem id="rent_management_menu_all"
+                  name="All Rentals"
+                  parent="rent_management_menu_root"
+                  action="action_quotations_with_onboarding2"
+                  sequence="10"/>
+
+        <menuitem id="rent_management_menu_encours"
+                  name="In Progress"
+                  parent="rent_management_menu_root"
+                  action="rent_management_action_encours"
+                  sequence="30"/>
+
+        <menuitem id="rent_management_menu_retour"
+                  name="Today's Returns"
+                  parent="rent_management_menu_root"
+                  action="rent_management_action_retour"
+                  sequence="40"/>
+
+        <menuitem id="rent_management_menu_retard"
+                  name="Late Rentals"
+                  parent="rent_management_menu_root"
+                  action="rent_management_action_retard"
+                  sequence="50"/>
+
+        <menuitem id="rent_management_menu_done"
+                  name="Completed"
+                  parent="rent_management_menu_root"
+                  action="rent_management_action_done"
+                  sequence="60"/>
+
+        <menuitem id="rent_management_menu_reserve"
+                  name="Reserved"
+                  parent="rent_management_menu_root"
+                  action="rent_management_action_reserve"
+                  sequence="70"/>
+
+
+        <!-- Main Menu: Vehicle Management -->
+        <menuitem name="Vehicles"
+                  id="gestion_des_vehicules_root"
+                  sequence="20"
+                  web_icon="rent_management,static\description\assets\icons\car_icon.png"/>
+
+        <!-- Action for Maintenance Products -->
+        <record id="action_maintenance_products" model="ir.actions.act_window">
+            <field name="name">Maintenances</field>
+            <field name="res_model">rent.maintenance</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first maintenance service!
+                </p>
+                <p>
+                    Define maintenance services to track vehicle operations like oil changes, belt replacements, etc.
+                </p>
+            </field>
+        </record>
+
+        <!-- Vehicle Management Sub-Menus -->
+        <menuitem name="List of Vehicles"
+                  id="gestion_des_contrats_menu_vehicules"
+                  parent="gestion_des_vehicules_root"
+                  action="maeva_vehicule"
+                  sequence="10"/>
+
+        <menuitem name="Maintenance Products"
+                  id="menu_maintenance_products"
+                  parent="gestion_des_vehicules_root"
+                  action="action_maintenance_products"
+                  sequence="20"/>
+
+
+        <!-- Main Menu: Calendar -->
+<!--        <menuitem name="Rental Calendar"-->
+<!--                  id="rent_contract_calendar_root"-->
+<!--                  sequence="30"-->
+<!--                  action="calendar.action_calendar_event"-->
+<!--                  web_icon="rent_management,static/description/calendar_icon.png"/>-->
+
+
+        <!-- Main Menu: Invoicing -->
+        <menuitem name="Rental Invoicing"
+                  id="rent_contract_invoice_root"
+                  sequence="40"
+                  action="account.action_move_out_invoice_type"
+                  web_icon="rent_management,static\description\assets\icons\invoice_icon.png"/>
+
+
+        <!-- Main Menu: Customers -->
+        <record id="action_rental_customers" model="ir.actions.act_window">
+            <field name="name">Rental Customers</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="domain">[('is_customer', '=', True)]</field>
+            <field name="context">{'default_is_customer': True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first rental customer!
+                </p>
+                <p>
+                    Manage your rental customers: track their rentals, contact information, and rental history.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Rental Customers"
+                  id="rent_management_customers_root"
+                  action="action_rental_customers"
+                  sequence="50"
+                  web_icon="rent_management,static\description\assets\icons\customers_icon.png"/>
+
+    </data>
+</odoo>
