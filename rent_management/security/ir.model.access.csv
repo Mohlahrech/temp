@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_agence_vehicule,agence.vehicule,model_agence_vehicule,base.group_user,1,1,1,1
-access_sale_prolongation,sale.prolongation,model_sale_order_prolongation,base.group_user,1,1,1,1
-access_product_template_maintenance,product.template.maintenance,product.model_product_template,base.group_user,1,1,1,1
-access_historique_maintenance_user,access.historique.maintenance.user,model_historique_maintenance,base.group_user,1,1,1,1
-access_rent_maintenance_user,access.rent.maintenance.user,model_rent_maintenance,base.group_user,1,1,1,1
-
-
