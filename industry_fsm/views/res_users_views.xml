@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Add assigned partners info to user form -->
+    <record id="view_users_form_inherit_assigned_partners" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.assigned.partners</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <!-- Add button box with assigned partners count -->
+            <xpath expr="//sheet" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" type="object" name="action_view_assigned_partners" icon="fa-users">
+                        <field string="Partenaires" name="assigned_partners_count" widget="statinfo"/>
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Tree view for assigned partners -->
+    <record id="view_assigned_partners_tree" model="ir.ui.view">
+        <field name="name">assigned.partners.tree</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <tree string="Partenaires assignés">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="city"/>
+                <field name="region"/>
+                <field name="potential"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

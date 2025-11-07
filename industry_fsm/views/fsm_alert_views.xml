@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FSM Alert Wizard Form View - Modal form for creating alerts -->
+    <!-- Referenced by: fsm_alert_wizard_action -->
+    <record id="fsm_alert_wizard_form" model="ir.ui.view">
+        <field name="name">fsm.alert.wizard.form</field>
+        <field name="model">fsm.alert.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Alerte">
+                <group>
+                    <field name="task_id" invisible="1"/>
+                    <field name="alert_message" placeholder="Enter your alert message here..."/>
+                </group>
+                <footer>
+                    <button name="action_create_alert" string="Create Alert" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- FSM Alert Wizard Action - Opens wizard modal to create alerts -->
+    <!-- Referenced by: project_task_views.xml button -->
+    <record id="fsm_alert_wizard_action" model="ir.actions.act_window">
+        <field name="name">Alerte</field>
+        <field name="res_model">fsm.alert.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_task_id': active_id}</field>
+        <field name="view_id" ref="fsm_alert_wizard_form"/>
+    </record>
+
+    <!-- FSM Alert Tree View -->
+    <record id="fsm_alert_tree_view" model="ir.ui.view">
+        <field name="name">fsm.alert.tree</field>
+        <field name="model">fsm.alert</field>
+        <field name="arch" type="xml">
+            <tree string="FSM Alerts" create="false" edit="false">
+                <field name="create_date" string="Date"/>
+                <field name="task_id" string="Task"/>
+                <field name="partner_id" string="Client"/>
+                <field name="name" string="Alert Message"/>
+                <field name="user_id" string="Created by"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- FSM Alert Form View -->
+    <record id="fsm_alert_form_view" model="ir.ui.view">
+        <field name="name">fsm.alert.form</field>
+        <field name="model">fsm.alert</field>
+        <field name="arch" type="xml">
+            <form string="FSM Alert" create="false" edit="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="task_id" string="Task"/>
+                            <field name="partner_id" string="Client"/>
+                        </group>
+                        <group>
+                            <field name="user_id" string="Created by"/>
+                            <field name="create_date" string="Created on"/>
+                        </group>
+                    </group>
+                    <group string="Alert Message">
+                        <field name="name" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- FSM Alert Action - Main action for alerts list view -->
+    <!-- Referenced by: fsm_alert_menu -->
+    <record id="fsm_alert_action" model="ir.actions.act_window">
+        <field name="name">Alertes</field>
+        <field name="res_model">fsm.alert</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No alerts found!</p>
+            <p>Alerts are created from task forms to highlight important information.</p>
+        </field>
+    </record>
+
+    <!-- FSM Alert Menu - Accessible only to FSM Managers -->
+    <!-- References: fsm_alert_action -->
+    <menuitem id="fsm_alert_menu"
+              name="Alertes visites"
+              parent="industry_fsm.fsm_menu_alerte"
+              action="fsm_alert_action"
+              groups="industry_fsm.group_fsm_manager"
+              sequence="50"/>
+
+</odoo>

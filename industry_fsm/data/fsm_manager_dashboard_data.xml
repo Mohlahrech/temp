@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Function to ensure all users have dashboard records for manager statistics -->
+        <function model="fsm.dashboard" name="ensure_all_users_dashboard_records"/>
+    </data>
+</odoo>

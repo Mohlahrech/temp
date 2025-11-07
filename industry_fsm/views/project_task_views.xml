@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+    	Task Views in Project and FSM app
+	-->
+
+    <record id="view_task_form2_inherit" model="ir.ui.view">
+        <field name="name">view.task.form2.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="timesheet_grid.project_task_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_timer_start'][hasclass('btn-primary')]" position='after'>
+                <field name="allow_worksheets" invisible="1"/>
+                <field name="allow_timesheets" invisible="1"/>
+                <field name="is_fsm" invisible="1"/>
+                <field name="fsm_is_sent" invisible="1"/>
+                <field name="worksheet_signature" invisible="1"/>
+                <field name="fsm_done" invisible="1"/>
+                <field name="display_timesheet_timer" invisible="1"/>
+                <field name="display_enabled_conditions_count" invisible="1"/>
+                <field name="display_satisfied_conditions_count" invisible="1"/>
+                <field name="display_mark_as_done_primary" invisible="1"/>
+                <field name="display_mark_as_done_secondary" invisible="1"/>
+                <field name="display_sign_report_primary" invisible="1"/>
+                <field name="display_sign_report_secondary" invisible="1"/>
+                <field name="display_send_report_primary" invisible="1"/>
+                <field name="display_send_report_secondary" invisible="1"/>
+                <field name="comment" invisible="1"/>
+                <button name="action_preview_worksheet" type="object" string="Sign Report" class="btn-primary"
+                    attrs="{'invisible': [('display_sign_report_primary', '=', False)]}" data-hotkey="y"/>
+                <button name="action_send_report" type="object" string="Send Report" class="btn-primary"
+                    attrs="{'invisible': [('display_send_report_primary', '=', False)]}" data-hotkey="g"/>
+                <button class="btn-primary" name="action_fsm_validate" type="object" string="Marquer comme fait"
+                        attrs="{'invisible': [('display_mark_as_done_primary', '=', False)]}" data-hotkey="v"/>
+                <button name="action_preview_worksheet" type="object" string="Sign Report" class="btn-secondary"
+                    attrs="{'invisible': [('display_sign_report_secondary', '=', False)]}" data-hotkey="y"/>
+                <button name="action_send_report" type="object" string="Send Report" class="btn-secondary"
+                    attrs="{'invisible': [('display_send_report_secondary', '=', False)]}" data-hotkey="g"/>
+                <button class="btn-secondary" name="action_fsm_validate" type="object" string="Marquer comme fait"
+                        attrs="{'invisible': [('display_mark_as_done_secondary', '=', False)]}" data-hotkey="v"/>
+            </xpath>
+            <xpath expr="//button[@name='action_recurring_tasks']" position="before">
+<!--                version 2 -->
+<!--                <button-->
+<!--                    string="Worksheet"-->
+<!--                    class="oe_stat_button oe_worksheet"-->
+<!--                    name="action_fsm_worksheet"-->
+<!--                    icon="fa-pencil" type="object"-->
+<!--                    groups="project.group_project_user"-->
+<!--                    attrs="{'invisible': ['|', '&amp;', ('partner_id', '=', False), ('is_fsm', '=', False), '|', ('allow_worksheets', '=', False), ('comment', '!=', False)]}">-->
+<!--                </button>-->
+                <!--                version 2 -->
+<!--                <button-->
+<!--                    string="Worksheet Complete"-->
+<!--                    class="oe_stat_button oe_worksheet_completed text-success"-->
+<!--                    name="action_fsm_worksheet"-->
+<!--                    icon="fa-check" type="object"-->
+<!--                    groups="project.group_project_user"-->
+<!--                    attrs="{'invisible': ['|', '|', ('partner_id', '=', False), ('allow_worksheets', '=', False), ('comment', '=', False)]}">-->
+<!--                </button>-->
+            </xpath>
+            <!-- FIXME: refactor this as in project_sharing_views.xml -->
+            <xpath expr="//field[@name='date_deadline']" position="replace">
+                <field name="date_deadline" attrs="{'invisible': [('is_fsm', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//page[@name='extra_info']" position="attributes">
+                <attribute name="groups">base.group_no_one</attribute>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="d-sm-inline d-md-none oe_stat_button" name="action_view_timesheets" type="object" icon="fa-clock-o" help="Time recorded on this task" attrs="{'invisible': ['|', '|', ('is_fsm', '=', False), ('allow_timesheets', '=', False), ('display_timesheet_timer', '=', False)]}">
+                    <div class="o_stat_info">
+                        <div>Time</div>
+                        <span class="o_stat_value">
+                            <field name="total_hours_spent" widget="float_time" nolabel="1" class="me-1" />
+                        </span>
+                    </div>
+                </button>
+                <button
+                    string="Customer Preview"
+                    class="oe_stat_button"
+                    name="action_preview_worksheet"
+                    icon="fa-globe" type="object"
+                    groups="project.group_project_user"
+                    attrs="{'invisible': [('worksheet_signature', '=', False)]}">
+                </button>
+            </xpath>
+            <field name="is_fsm" string="is FSM ?" invisible="1"/>
+            <field name="partner_id" position="attributes">
+                <attribute name="options">{'always_reload': True}</attribute>
+                <attribute name="context">{'show_address': is_fsm, 'res_partner_search_mode': 'customer'}</attribute>
+                <attribute name="attrs">{'required': [('is_fsm', '=', True)]}</attribute>
+            </field>
+<!--            version 2 -->
+            <field name="partner_id" position="after">
+<!--                <label for="action_fsm_navigate" attrs="{'invisible': [('is_fsm', '=', False)]}"/>-->
+<!--                <div attrs="{'invisible': [('is_fsm', '=', False)]}">-->
+<!--                    <button-->
+<!--                        name="action_fsm_navigate" type="object" class="btn btn-link ps-0 pt-0 pb-2"-->
+<!--                        icon="fa-arrow-right" string="Navigate To" colspan="2"-->
+<!--                        attrs="{'invisible': [('is_fsm', '=', False)]}"/>-->
+<!--                </div>-->
+                <field name="planned_date_begin" string="Date de départ" eval="DateTime.today().strftime('%Y-%m-%d 07:00:00')"/>
+            <field name="planned_date_end" string="Date de retour" eval="DateTime.today().strftime('%Y-%m-%d 09:00:00')"/>
+            </field>
+            <field name="project_id" position="attributes">
+                <attribute name="context">{
+                    'default_is_fsm': context.get('fsm_mode'),
+                }
+                </attribute>
+                <attribute name="domain">[
+                    ('active', '=', True),
+                    ('company_id', '=', company_id),
+                    ('is_fsm', '=?', context.get('fsm_mode'))
+                ]</attribute>
+            </field>
+            <xpath expr="//group/field[@name='project_id']" position="attributes">
+                <attribute name="context">{
+                    'default_is_fsm': context.get('fsm_mode'),
+                }
+                </attribute>
+                <attribute name="domain">[
+                    ('active', '=', True),
+                    ('company_id', '=', company_id),
+                    ('is_fsm', '=?', context.get('fsm_mode'))
+                ]</attribute>
+            </xpath>
+            <field name="partner_phone" position="attributes">
+                <attribute name="attrs">
+                    {'invisible': [('is_fsm', '=', False)]}
+                </attribute>
+            </field>
+        </field>
+    </record>
+
+    <!--
+    	Project Views (in project app)
+	-->
+
+    <record id="quick_create_task_form_fsm" model="ir.ui.view">
+        <field name="name">project.task.form.quick_create</field>
+        <field name="model">project.task</field>
+        <field name="priority">1000</field>
+        <field name="inherit_id" ref="project.quick_create_task_form"/>
+        <field name="arch" type="xml">
+            <field name="user_ids" position="attributes">
+                <attribute name="widget">many2many_avatar_user</attribute>
+            </field>
+            <field name="user_ids" position="before">
+                <field name="is_fsm" invisible="1"/>
+                <field name="allow_worksheets" invisible="1"/>
+                <field name="partner_id" attrs="{'required': [('is_fsm', '=', True)], 'invisible': [('is_fsm', '=', False)]}" widget="res_partner_many2one" context="{'res_partner_search_mode': 'customer'}"/>
+                <field name="project_id" attrs="{'invisible': [('is_fsm', '=', False)]}" domain="[('is_fsm', '=', True)]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="project_view_form_inherit" model="ir.ui.view">
+        <field name="name">project.view.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.project_invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath  expr="//group[@name='group_documents_analytics']" position="after">
+                <group name="group_field_service" string="Field Service" col="1" class="row mt16 o_settings_container col-lg-6">
+                    <div>
+                        <div class="o_setting_box" groups="base.group_no_one">
+                            <div class="o_setting_left_pane">
+                                <field name="is_fsm"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="is_fsm"/>
+                                <div class="text-muted" id="allow_billable_setting">
+                                    Manage tasks in the Field Service module
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_setting_box mt-4" id="industry_fsm">
+                            <div class="o_setting_left_pane">
+                                <field name="allow_worksheets"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="allow_worksheets"/>
+                                <div class="text-muted" id="allow_billable_setting">
+                                    Create reports to be signed off by your customers
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="fsm_form_view_comment" model="ir.ui.view">
+        <field name="name">project.task.fsm.comment.form</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <form string="comment" create="false" delete="false">
+                <sheet>
+                    <field name="comment"/>
+                    <field name="name" invisible="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Inherit project.view_task_form2 to add partner function and hide project_id -->
+    <record id="project_task_form2_inherit_fsm" model="ir.ui.view">
+        <field name="name">project.task.form2.inherit.fsm</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <!-- Make project_id field invisible -->
+            <xpath expr="//field[@name='project_id']" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+            
+            <!-- Add partner function field after partner_id -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="partner_function" string="Poste du contact" readonly="1"/>
+                <field name="partner_potential" string="Potentiel du contact"/>
+            </xpath>
+            
+            <!-- Add three new notebook pages for visit fields -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Objet de la visite" name="objet_visite_page">
+                    <field name="objet_visite" placeholder="Décrivez l'objectif et le contexte de cette visite..."/>
+                </page>
+                
+                <page string="Compte rendu" name="compte_rendu_page">
+                    <field name="compte_rendu" placeholder="Détaillez ce qui s'est déroulé pendant la visite..."/>
+                </page>
+                
+                <page string="Objectif prochaine" name="objectif_prochaine_page">
+                    <field name="objectif_prochaine" placeholder="Définissez les objectifs pour la prochaine visite..."/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Custom FSM Task Form View -->
+    <record id="project_task_fsm_custom_form" model="ir.ui.view">
+        <field name="name">project.task.fsm.custom.form</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <form string="Tâche FSM">
+                <header>
+                    <button name="action_fsm_validate" string="Marquer comme fait" type="object" 
+                            class="btn-primary" attrs="{'invisible': [('fsm_done', '=', True)]}"/>
+                    <button name="action_preview_worksheet" string="Rapport" type="object" 
+                            class="btn-secondary" attrs="{'invisible': [('allow_worksheets', '=', False)]}"/>
+                    <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+<!--                        <button class="oe_stat_button" type="object" name="action_view_timesheets" icon="fa-clock-o">-->
+<!--                            <field string="Temps" name="timesheet_ids" widget="statinfo"/>-->
+<!--                        </button>-->
+                        <!-- References: fsm_alert_wizard_action (defined in fsm_alert_views.xml) -->
+                        <button name="%(industry_fsm.fsm_alert_wizard_action)d" string="Alerte" type="action" class="oe_stat_button" icon="fa-exclamation-triangle">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Alerte</span>
+                            </div>
+                        </button>
+                        <!-- Patient Link Button -->
+                        <button name="action_open_patient_page" string="Patient" type="object" class="oe_stat_button" icon="fa-user-md">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Patient</span>
+                            </div>
+                        </button>
+
+                    </div>
+                    <!-- Hidden fields for warning computation -->
+                    <field name="show_partner_creation_warning" invisible="1"/>
+                    <field name="partner_creation_warning" invisible="1"/>
+                    <field name="has_rejected_partner_request" invisible="1"/>
+                    
+                    <div class="oe_title">
+                        <!-- Warning message when partner creation is pending (replaces name) -->
+                        <div attrs="{'invisible': ['|', ('show_partner_creation_warning', '=', False), ('has_rejected_partner_request', '=', True)]}" 
+                             class="alert alert-danger mt-3" role="alert" style="font-size: 18px; font-weight: bold; text-align: center;">
+                            <i class="fa fa-exclamation-triangle" style="margin-right: 8px;"></i>
+                            <field name="partner_creation_warning" readonly="1" class="text-danger" style="border: none; background: none; font-size: inherit; font-weight: inherit;"/>
+                        </div>
+                        
+                        <!-- Normal title when no pending request (show even if rejected request exists) -->
+                        <h1 attrs="{'invisible': ['&amp;', ('show_partner_creation_warning', '=', True), ('has_rejected_partner_request', '=', False)]}">
+                            <field name="name" placeholder="Titre de la tâche..."/>
+                        </h1>
+                    </div>
+                    
+                    <!-- Warning message when partner creation is rejected (shown separately, doesn't replace name) -->
+                    <!-- Disappears when partner is selected (handled by compute method) -->
+                    <div attrs="{'invisible': ['|', ('show_partner_creation_warning', '=', False), ('has_rejected_partner_request', '=', False)]}" 
+                         class="alert alert-warning mt-3" role="alert" style="font-size: 16px; font-weight: bold; text-align: center;">
+                        <i class="fa fa-info-circle" style="margin-right: 8px;"></i>
+                        <field name="partner_creation_warning" readonly="1" class="text-warning" style="border: none; background: none; font-size: inherit; font-weight: inherit;"/>
+                    </div>
+                    <group>
+                        <group>
+    <field name="partner_id"
+           string="Client"
+           options="{'no_create': True, 'no_create_edit': True}"/>
+    <field name="has_pending_partner_request" invisible="1"/>
+</group>
+
+<div attrs="{'invisible': ['|', '|', ('partner_id', '!=', False), ('has_pending_partner_request', '=', True), ('has_rejected_partner_request', '=', True)]}" class="d-flex align-items-center">
+    <button name="action_request_partner_creation"
+            string="Demander création"
+            type="object"
+            class="btn-primary me-2"
+            icon="fa-plus"/>
+    <span class="text-muted small">
+        Cliquez ici si le client n'existe pas dans la liste pour demander sa création
+    </span>
+</div>
+
+<group>
+    <field name="partner_function" string="Poste du contact" readonly="1"/>
+    <field name="partner_phone" string="Téléphone" readonly="1"/>
+    <field name="partner_potential" string="Potentiel du contact"/>
+    <field name="user_ids" widget="many2many_tags" string="Assigné à"/>
+</group>
+
+                        <group>
+                            <field name="planned_date_begin" string="Date de début prévue"/>
+                            <field name="planned_date_end" string="Date de fin prévue"/>
+                            <field name="project_id" string="Projet"/>
+                            <field name="partner_region" string="Région"/>
+                            <field name="tag_ids" widget="many2many_tags" string="Étiquettes"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Objectif de la visite" name="details_visite">
+                            <field name="objet_visite" placeholder="Décrivez l'objectif et le contexte de cette visite..."/>
+                        </page>
+                        
+                        <page string="Compte-rendu" name="compte_rendu">
+                            <field name="compte_rendu" placeholder="Détaillez ce qui s'est déroulé pendant la visite..."/>
+                        </page>
+                        
+                        <page string="Objectif suivant" name="objectif_suivant">
+                            <field name="objectif_prochaine" placeholder="Définissez les objectifs pour la prochaine visite..."/>
+                        </page>
+                        
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="Description générale de la tâche..."/>
+                        </page>
+                        <!--                version 2 -->
+<!--                        <page string="Temps passé" name="timesheet" attrs="{'invisible': [('allow_timesheets', '=', False)]}">-->
+<!--                            <field name="timesheet_ids" mode="tree,kanban">-->
+<!--                                <tree editable="bottom" string="Temps passé">-->
+<!--                                    <field name="date"/>-->
+<!--                                    <field name="name"/>-->
+<!--                                    <field name="unit_amount" widget="timesheet_uom" sum="Total"/>-->
+<!--                                    <field name="user_id" invisible="1"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </page>-->
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+                
+                <!-- Hidden fields for functionality -->
+                <field name="fsm_done" invisible="1"/>
+                <field name="allow_worksheets" invisible="1"/>
+                <field name="allow_timesheets" invisible="1"/>
+                <field name="project_id" invisible="1"/>
+                <field name="company_id" invisible="1"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Override FSM action to use our custom form view -->
+    <record id="project_task_action_fsm_view_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="30"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="project_task_fsm_custom_form"/>
+        <field name="act_window_id" ref="project_task_action_fsm"/>
+    </record>
+
+    <!-- Add visit alert message to FSM kanban view -->
+    <record id="project_task_view_kanban_fsm_visit_alert" model="ir.ui.view">
+        <field name="name">project.task.kanban.fsm.visit.alert</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="industry_fsm.project_task_view_kanban_fsm"/>
+        <field name="arch" type="xml">
+            <!-- Add the alert fields to kanban -->
+            <xpath expr="//kanban" position="inside">
+                <field name="visite_alert_message"/>
+                <field name="visite_alert_status"/>
+                <field name="partner_creation_warning"/>
+                <field name="show_partner_creation_warning"/>
+                <field name="has_rejected_partner_request"/>
+            </xpath>
+            
+            <!-- Add alert message at the bottom of the kanban card -->
+            <xpath expr="//div[@name='date_deadline']" position="after">
+                <div t-if="record.visite_alert_message.raw_value" 
+                     t-attf-class="mt-1 small fw-bold {{record.visite_alert_status.raw_value == 'danger' ? 'text-danger' : 'text-success'}}">
+                    <t t-esc="record.visite_alert_message.value"/>
+                </div>
+                
+                <!-- Add partner creation warning - pending -->
+                <div t-if="record.show_partner_creation_warning.raw_value and !record.has_rejected_partner_request.raw_value" 
+                     class="mt-2 alert alert-danger small fw-bold text-center" 
+                     style="margin: 5px 0; padding: 8px; border-radius: 4px; background-color: #f8d7da; border: 1px solid #f5c6cb;">
+                    <i class="fa fa-exclamation-triangle" style="margin-right: 5px;"></i>
+                    <t t-esc="record.partner_creation_warning.value"/>
+                </div>
+                
+                <!-- Add partner creation warning - rejected -->
+                <div t-if="record.show_partner_creation_warning.raw_value and record.has_rejected_partner_request.raw_value" 
+                     class="mt-2 alert alert-warning small fw-bold text-center" 
+                     style="margin: 5px 0; padding: 8px; border-radius: 4px; background-color: #fff3cd; border: 1px solid #ffeaa7;">
+                    <i class="fa fa-info-circle" style="margin-right: 5px;"></i>
+                    <t t-esc="record.partner_creation_warning.value"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

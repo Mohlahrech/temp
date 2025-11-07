@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Function to create dashboard records for all users -->
+        <function model="fsm.dashboard" name="create_dashboard_records"/>
+    </data>
+</odoo>

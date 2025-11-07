@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FSM Dashboard User Selection Wizard Form -->
+    <record id="fsm_dashboard_wizard_form" model="ir.ui.view">
+        <field name="name">fsm.dashboard.wizard.form</field>
+        <field name="model">fsm.dashboard.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Select Users for Dashboard">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="include_current_user" widget="boolean_toggle" class="me-3"/>
+                            Select Users for Dashboard View
+                        </h1>
+                    </div>
+                    
+                    <group>
+                        <field name="include_current_user" string="Include My Dashboard"/>
+                        <field name="user_ids" widget="many2many_checkboxes" 
+                               options="{'no_create': True, 'no_create_edit': True}"/>
+                    </group>
+                    
+                    <div class="alert alert-info" role="alert">
+                        <i class="fa fa-info-circle me-2"></i>
+                        <strong>Tip:</strong> Select multiple users to compare their dashboard statistics side by side.
+                    </div>
+                </sheet>
+                <footer>
+                    <button name="action_view_selected_dashboards" string="View Selected Dashboards" 
+                            type="object" class="btn-primary"/>
+                    <button name="action_view_all_dashboards" string="View All Users" 
+                            type="object" class="btn-secondary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- FSM Dashboard User Selection Wizard Action -->
+    <record id="fsm_dashboard_wizard_action" model="ir.actions.act_window">
+        <field name="name">Select Users for Dashboard</field>
+        <field name="res_model">fsm.dashboard.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="fsm_dashboard_wizard_form"/>
+    </record>
+
+</odoo>
