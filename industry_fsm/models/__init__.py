@@ -12,4 +12,6 @@ from . import temp_partner
 from . import partner_creation_wizard
 from . import fsm_dashboard
 from . import fsm_dashboard_wizard
+from . import fsm_kpi_dashboard
+from . import fsm_kpi_dashboard_filter
 

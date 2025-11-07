@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- FSM KPI Dashboard Kanban View -->
+        <record id="fsm_kpi_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">fsm.kpi.dashboard.kanban</field>
+            <field name="model">fsm.kpi.dashboard</field>
+            <field name="arch" type="xml">
+                <kanban class="o_fsm_kpi_dashboard_kanban" create="false" edit="false" delete="false" default_order="sequence">
+                    <field name="kpi_name"/>
+                    <field name="kpi_code"/>
+                    <field name="filter_user_id"/>
+                    <field name="value"/>
+                    <field name="previous_value"/>
+                    <field name="trend"/>
+                    <field name="trend_percentage"/>
+                    <field name="icon"/>
+                    <field name="color"/>
+                    <field name="description"/>
+                    <field name="sequence"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card" 
+                                 style="background: #ffffff; 
+                                        border: 1px solid #e0e0e0; 
+                                        border-radius: 4px; 
+                                        padding: 40px 30px; 
+                                        margin: 10px; 
+                                        min-height: 200px;
+                                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                                
+                                <!-- KPI Name -->
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 16px; color: #666666; font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;">
+                                        <t t-esc="record.kpi_name.value"/>
+                                    </div>
+                                </div>
+                                
+                                <!-- KPI Value -->
+                                <div style="margin-bottom: 15px;">
+                                    <div style="font-size: 64px; font-weight: 300; color: #212121; line-height: 1;">
+                                        <t t-esc="record.value.value"/>
+                                    </div>
+                                </div>
+                                
+                                <!-- Trend Indicator (Simple) -->
+                                <div t-if="record.trend.raw_value != 'stable'" style="margin-top: 15px;">
+                                    <span t-if="record.trend.raw_value == 'up'" 
+                                          style="color: #4CAF50; font-size: 14px; font-weight: 400;">
+                                        ↑ <t t-esc="record.trend_percentage.value"/>%
+                                    </span>
+                                    <span t-if="record.trend.raw_value == 'down'" 
+                                          style="color: #757575; font-size: 14px; font-weight: 400;">
+                                        ↓ <t t-esc="record.trend_percentage.value"/>%
+                                    </span>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- FSM KPI Dashboard Tree View -->
+        <record id="fsm_kpi_dashboard_tree_view" model="ir.ui.view">
+            <field name="name">fsm.kpi.dashboard.tree</field>
+            <field name="model">fsm.kpi.dashboard</field>
+            <field name="arch" type="xml">
+                <tree string="FSM KPI Dashboard" create="false" edit="false" delete="false" default_order="sequence">
+                    <field name="sequence" widget="handle"/>
+                    <field name="kpi_name"/>
+                    <field name="kpi_code"/>
+                    <field name="filter_user_id" string="Filter by User"/>
+                    <field name="value"/>
+                    <field name="previous_value"/>
+                    <field name="trend_percentage" widget="percentage"/>
+                    <field name="icon"/>
+                    <field name="color"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FSM KPI Dashboard Search View -->
+        <record id="fsm_kpi_dashboard_search_view" model="ir.ui.view">
+            <field name="name">fsm.kpi.dashboard.search</field>
+            <field name="model">fsm.kpi.dashboard</field>
+            <field name="arch" type="xml">
+                <search string="FSM KPI Dashboard">
+                </search>
+            </field>
+        </record>
+
+        <!-- FSM KPI Dashboard Search View (Minimal for Manager) -->
+        <record id="fsm_kpi_dashboard_search_view_manager" model="ir.ui.view">
+            <field name="name">fsm.kpi.dashboard.search.manager</field>
+            <field name="model">fsm.kpi.dashboard</field>
+            <field name="arch" type="xml">
+                <search string="FSM KPI Dashboard">
+                </search>
+            </field>
+        </record>
+
+        <!-- FSM KPI Dashboard Action -->
+        <record id="fsm_kpi_dashboard_action" model="ir.actions.act_window">
+            <field name="name">FSM KPI Dashboard</field>
+            <field name="res_model">fsm.kpi.dashboard</field>
+            <field name="view_mode">kanban,tree</field>
+            <field name="domain">[('active', '=', True)]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="fsm_kpi_dashboard_search_view"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    FSM KPI Dashboard
+                </p>
+                <p>
+                    Visualize key performance indicators for your Field Service Management operations.
+                    This dashboard provides real-time insights into tasks, completion rates, and team performance.
+                </p>
+            </field>
+        </record>
+
+        <!-- FSM KPI Dashboard Action View Kanban -->
+        <record id="fsm_kpi_dashboard_action_view_kanban" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="fsm_kpi_dashboard_kanban_view"/>
+            <field name="act_window_id" ref="fsm_kpi_dashboard_action"/>
+        </record>
+
+        <!-- FSM KPI Dashboard Action View Tree -->
+        <record id="fsm_kpi_dashboard_action_view_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="fsm_kpi_dashboard_tree_view"/>
+            <field name="act_window_id" ref="fsm_kpi_dashboard_action"/>
+        </record>
+
+    </data>
+</odoo>

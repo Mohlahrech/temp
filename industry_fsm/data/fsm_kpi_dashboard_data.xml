@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- FSM KPI Dashboard Default Tiles -->
+        
+        <!-- Tasks Today -->
+        <record id="fsm_kpi_tasks_today" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites Aujourd'hui</field>
+            <field name="kpi_code">tasks_today</field>
+            <field name="sequence">10</field>
+            <field name="icon">fa-calendar-check-o</field>
+            <field name="color">#667eea</field>
+            <field name="description">Nombre de visites planifiées pour aujourd'hui</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Unassigned Tasks -->
+        <record id="fsm_kpi_tasks_unassigned" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites Non Assignées</field>
+            <field name="kpi_code">tasks_unassigned</field>
+            <field name="sequence">20</field>
+            <field name="icon">fa-user-times</field>
+            <field name="color">#f093fb</field>
+            <field name="description">Visites en attente d'assignation</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Completed Today -->
+        <record id="fsm_kpi_tasks_completed_today" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites Terminées Aujourd'hui</field>
+            <field name="kpi_code">tasks_completed_today</field>
+            <field name="sequence">30</field>
+            <field name="icon">fa-check-circle</field>
+            <field name="color">#4facfe</field>
+            <field name="description">Visites complétées aujourd'hui</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Overdue Tasks -->
+        <record id="fsm_kpi_tasks_overdue" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites En Retard</field>
+            <field name="kpi_code">tasks_overdue</field>
+            <field name="sequence">40</field>
+            <field name="icon">fa-exclamation-triangle</field>
+            <field name="color">#fa709a</field>
+            <field name="description">Visites en retard (date de fin dépassée)</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Pending Tasks -->
+        <record id="fsm_kpi_tasks_pending" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites En Attente</field>
+            <field name="kpi_code">tasks_pending</field>
+            <field name="sequence">50</field>
+            <field name="icon">fa-clock-o</field>
+            <field name="color">#feca57</field>
+            <field name="description">Visites en cours, non terminées</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Completion Rate -->
+        <record id="fsm_kpi_completion_rate" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Taux de Complétion</field>
+            <field name="kpi_code">completion_rate</field>
+            <field name="sequence">60</field>
+            <field name="icon">fa-percent</field>
+            <field name="color">#48c6ef</field>
+            <field name="description">Pourcentage de visites complétées</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Total Tasks -->
+        <record id="fsm_kpi_tasks_total" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Total des Visites</field>
+            <field name="kpi_code">tasks_total</field>
+            <field name="sequence">70</field>
+            <field name="icon">fa-list-alt</field>
+            <field name="color">#a8edea</field>
+            <field name="description">Nombre total de visites actives</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Completed This Week -->
+        <record id="fsm_kpi_tasks_completed_week" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites Terminées Cette Semaine</field>
+            <field name="kpi_code">tasks_completed_week</field>
+            <field name="sequence">80</field>
+            <field name="icon">fa-calendar-week</field>
+            <field name="color">#30cfd0</field>
+            <field name="description">Visites complétées cette semaine</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Tasks This Week -->
+        <record id="fsm_kpi_tasks_this_week" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites Cette Semaine</field>
+            <field name="kpi_code">tasks_this_week</field>
+            <field name="sequence">90</field>
+            <field name="icon">fa-calendar</field>
+            <field name="color">#330867</field>
+            <field name="description">Visites planifiées cette semaine</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Active Users -->
+        <record id="fsm_kpi_active_users" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Utilisateurs Actifs</field>
+            <field name="kpi_code">active_users</field>
+            <field name="sequence">100</field>
+            <field name="icon">fa-users</field>
+            <field name="color">#eb3349</field>
+            <field name="description">Nombre d'utilisateurs avec des visites assignées</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Tasks This Month -->
+        <record id="fsm_kpi_tasks_this_month" model="fsm.kpi.dashboard">
+            <field name="kpi_name">Visites Ce Mois</field>
+            <field name="kpi_code">tasks_this_month</field>
+            <field name="sequence">110</field>
+            <field name="icon">fa-calendar-alt</field>
+            <field name="color">#f5576c</field>
+            <field name="description">Visites planifiées ce mois</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+</odoo>

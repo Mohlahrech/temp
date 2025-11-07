@@ -340,6 +340,11 @@ class Task(models.Model):
     def action_request_partner_creation(self):
         """Open wizard to request partner creation"""
         self.ensure_one()
+        
+        # Validate that planned_date_begin and planned_date_end are filled
+        if not self.planned_date_begin or not self.planned_date_end:
+            raise UserError(_('Veuillez ajouter la date de début et la date de fin, avant de continuer'))
+        
         return {
             'name': _('Demander création partenaire'),
             'type': 'ir.actions.act_window',
@@ -566,6 +571,13 @@ class Task(models.Model):
             If allow billable on task, timesheet product set on project and user has privileges :
             Create SO confirmed with time and material.
         """
+        # Validate that required fields are filled before validation
+        for task in self:
+            if not task.objet_visite or not task.objet_visite.strip() or \
+               not task.compte_rendu or not task.compte_rendu.strip() or \
+               not task.objectif_prochaine or not task.objectif_prochaine.strip():
+                raise UserError(_('Veuillez remplir \'Objectif Visite\', \'Compte Rendu\', et \'Objectif Prochaine\' avant de continuer.'))
+        
         Timer = self.env['timer.timer']
         tasks_running_timer_ids = Timer.search([('res_model', '=', 'project.task'), ('res_id', 'in', self.ids)])
         timesheets = self.env['account.analytic.line'].sudo().search([('task_id', 'in', self.ids)])

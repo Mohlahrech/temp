@@ -7,11 +7,11 @@ class PartnerCreationWizard(models.TransientModel):
     _name = 'partner.creation.wizard'
     _description = 'Partner Creation Request Wizard'
     
-    name = fields.Char(string='Partner Name', required=True, placeholder='Enter the partner name...')
-    phone = fields.Char(string='Phone', placeholder='Optional phone number...')
-    email = fields.Char(string='Email', placeholder='Optional email address...')
-    city = fields.Char(string='City', placeholder='Optional city...')
-    notes = fields.Text(string='Additional Notes', placeholder='Any additional information...')
+    name = fields.Char(string='Partner Name', required=True)
+    phone = fields.Char(string='Phone')
+    email = fields.Char(string='Email')
+    city = fields.Char(string='City')
+    notes = fields.Text(string='Additional Notes')
     task_id = fields.Many2one('project.task', string='Related Task', required=True)
     
     def action_submit_request(self):

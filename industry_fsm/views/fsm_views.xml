@@ -1099,17 +1099,17 @@
         groups="industry_fsm.group_fsm_user"/>
 
     <!-- FSM Dashboard menu -->
-    <menuitem id="fsm_menu_dashboard"
-        name="Dashboard"
-        sequence="5"
-        parent="fsm_menu_root"
-        action="fsm_dashboard_action"
-        groups="industry_fsm.group_fsm_user"/>
+<!--    <menuitem id="fsm_menu_dashboard"-->
+<!--        name="Dashboard"-->
+<!--        sequence="5"-->
+<!--        parent="fsm_menu_root"-->
+<!--        action="fsm_dashboard_action"-->
+<!--        groups="industry_fsm.group_fsm_user"/>-->
 
     <menuitem id="fsm_menu_alerte"
         name="Alertes"
         sequence="80"
-        parent="industry_fsm.fsm_menu_root"
+        parent="industry_fsm.fsm_menu_manager_root"
         groups="industry_fsm.group_fsm_manager"/>
 
 
@@ -1166,12 +1166,12 @@
 <!--            parent="industry_fsm.fsm_menu_all_tasks_root"-->
 <!--            groups="industry_fsm.group_fsm_manager" />-->
 
-    <menuitem id="fsm_menu_planning"
-        name="Planning"
-        sequence="20"
-        parent="fsm_menu_root"
-        action="industry_fsm.project_task_action_fsm_planning_groupby_project"
-        groups="industry_fsm.group_fsm_manager"/>
+<!--    <menuitem id="fsm_menu_planning"-->
+<!--        name="Planning"-->
+<!--        sequence="20"-->
+<!--        parent="fsm_menu_root"-->
+<!--        action="industry_fsm.project_task_action_fsm_planning_groupby_project"-->
+<!--        groups="industry_fsm.group_fsm_manager"/>-->
 
 <!--        <menuitem id="project_task_menu_planning_by_user_fsm"-->
 <!--            name="Par utilisateur"-->

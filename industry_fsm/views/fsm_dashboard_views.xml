@@ -183,31 +183,17 @@
         <field name="act_window_id" ref="fsm_dashboard_action"/>
     </record>
 
-    <!-- FSM Manager Statistics Action (All Users) -->
+    <!-- FSM Manager Statistics Action (KPI Dashboard) -->
     <record id="fsm_manager_statistics_action" model="ir.actions.act_window">
-        <field name="name">Statistiques des utilisateurs</field>
-        <field name="res_model">fsm.dashboard</field>
-        <field name="view_mode">kanban,tree</field>
-        <field name="domain">[]</field>
-        <field name="context">{
-            'create_dashboard_records': True,
-            'create': False,
-            'edit': False,
-            'delete': False
-        }</field>
-        <field name="search_view_id" ref="fsm_dashboard_search_view"/>
+        <field name="name">Tableau de Bord KPI</field>
+        <field name="res_model">fsm.kpi.dashboard</field>
+        <field name="view_mode">kanban</field>
+        <field name="domain">[('active', '=', True)]</field>
+        <field name="context" eval="{}"/>
+        <field name="search_view_id" ref="fsm_kpi_dashboard_search_view_manager"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Statistiques des utilisateurs FSM
-            </p>
-            <p>
-                Visualisez les statistiques de tous les utilisateurs FSM incluant le nombre total de visites, 
-                les visites terminées, les visites manquées et les visites d'aujourd'hui.
-            </p>
-            <p>
-                <button name="create_dashboard_records" type="object" class="btn-primary">
-                    Créer les enregistrements du tableau de bord
-                </button>
+                Tableau de Bord KPI FSM
             </p>
         </field>
     </record>
@@ -216,15 +202,7 @@
     <record id="fsm_manager_statistics_action_view_kanban" model="ir.actions.act_window.view">
         <field name="sequence" eval="1"/>
         <field name="view_mode">kanban</field>
-        <field name="view_id" ref="fsm_dashboard_kanban_view"/>
-        <field name="act_window_id" ref="fsm_manager_statistics_action"/>
-    </record>
-
-    <!-- FSM Manager Statistics Action View Tree -->
-    <record id="fsm_manager_statistics_action_view_tree" model="ir.actions.act_window.view">
-        <field name="sequence" eval="2"/>
-        <field name="view_mode">tree</field>
-        <field name="view_id" ref="fsm_dashboard_tree_view"/>
+        <field name="view_id" ref="fsm_kpi_dashboard_kanban_view"/>
         <field name="act_window_id" ref="fsm_manager_statistics_action"/>
     </record>
 

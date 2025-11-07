@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- FSM KPI Dashboard Filter Form View -->
+        <record id="fsm_kpi_dashboard_filter_form" model="ir.ui.view">
+            <field name="name">fsm.kpi.dashboard.filter.form</field>
+            <field name="model">fsm.kpi.dashboard.filter</field>
+            <field name="arch" type="xml">
+                <form string="Filter Dashboard by User">
+                    <sheet>
+                        <group>
+                            <field name="filter_user_id" 
+                                   widget="many2one" 
+                                   options="{'no_create': True, 'no_create_edit': True}"
+                                   placeholder="Select a user to filter dashboard..."/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_apply_filter" string="Apply Filter" type="object" class="btn-primary"/>
+                        <button name="action_clear_filter" string="Clear Filter" type="object" class="btn-secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- FSM KPI Dashboard Filter Action -->
+        <record id="fsm_kpi_dashboard_filter_action" model="ir.actions.act_window">
+            <field name="name">Filter Dashboard</field>
+            <field name="res_model">fsm.kpi.dashboard.filter</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="fsm_kpi_dashboard_filter_form"/>
+        </record>
+
+    </data>
+</odoo>
+

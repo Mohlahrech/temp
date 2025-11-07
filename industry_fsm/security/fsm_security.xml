@@ -13,8 +13,11 @@
 
         <record id="group_fsm_manager" model="res.groups">
             <field name="category_id" ref="base.module_category_services_field_service"/>
-            <field name="name">Administrator</field>
-            <field name="implied_ids" eval="[(4, ref('industry_fsm.group_fsm_user')), (4, ref('project.group_project_manager'))]"/>
+            <field name="name">FSM Manager</field>
+            <field name="implied_ids" eval="[
+                (4, ref('project.group_project_manager')),
+                (4, ref('hr_timesheet.group_hr_timesheet_user'))
+            ]"/>
             <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
         </record>
 
@@ -27,7 +30,7 @@
             <field name="category_id" ref="base.module_category_hidden"/>
         </record>
 
-        <record model="ir.rule" id="report_project_task_user_fsm_rule">
+        <record id="report_project_task_user_fsm_rule" model="ir.rule">
             <field name="name">Tasks Analysis: FSM project visibility</field>
             <field name="model_id" ref="model_report_project_task_user_fsm"/>
             <field name="domain_force">[
@@ -42,9 +45,38 @@
             <field name="groups" eval="[(4,ref('industry_fsm.group_fsm_user'))]"/>
         </record>
 
-        <record model="ir.rule" id="report_project_task_user_fsm_manager_rule">
+        <record id="report_project_task_user_fsm_manager_rule" model="ir.rule">
             <field name="name">Tasks Analysis: FSM project visibility for manager</field>
             <field name="model_id" ref="model_report_project_task_user_fsm"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('industry_fsm.group_fsm_manager'))]"/>
+        </record>
+
+        <!-- Record Rules for FSM Manager: Global access to all FSM records -->
+        <record id="project_task_fsm_manager_global_rule" model="ir.rule">
+            <field name="name">FSM Manager: Global access to all tasks</field>
+            <field name="model_id" ref="project.model_project_task"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('industry_fsm.group_fsm_manager'))]"/>
+        </record>
+
+        <record id="project_project_fsm_manager_global_rule" model="ir.rule">
+            <field name="name">FSM Manager: Global access to all projects</field>
+            <field name="model_id" ref="project.model_project_project"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('industry_fsm.group_fsm_manager'))]"/>
+        </record>
+
+        <record id="res_partner_fsm_manager_global_rule" model="ir.rule">
+            <field name="name">FSM Manager: Global access to all partners</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('industry_fsm.group_fsm_manager'))]"/>
+        </record>
+
+        <record id="res_users_fsm_manager_global_rule" model="ir.rule">
+            <field name="name">FSM Manager: Global access to all users</field>
+            <field name="model_id" ref="base.model_res_users"/>
             <field name="domain_force">[(1, '=', 1)]</field>
             <field name="groups" eval="[(4, ref('industry_fsm.group_fsm_manager'))]"/>
         </record>
